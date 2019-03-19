@@ -1,6 +1,8 @@
 <section id="header">
-  <h1>
-    <a href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
-  </h1>
-  <h2>{{.Site.Params.subtitle}}</h2>
+  <h1>{{.Site.Title}}</h1>
+  {{ range $.Site.Data.menu }}
+    {{ range .items }}
+      <h2>{{ .name }}</h2>
+    {{ end }}
+  {{ end }}
 </section>
